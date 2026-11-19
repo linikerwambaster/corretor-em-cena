@@ -57,15 +57,39 @@
     });
   }
 
+  // ---------- título (gancho) conforme o anúncio ----------
+  // Link do anúncio: ...?utm_content=v1-antes (antes e depois), v2-custo (custo) ou v3-tempo (tempo). Também aceita ?h=antes|custo|tempo.
+  var GANCHOS = {
+    custo: {
+      h1: 'Pare de pagar editor por <em>cada vídeo de imóvel.</em>',
+      sub: 'Você grava no celular. A IA corta, legenda e finaliza dentro do Claude. Você só revisa e posta. Uma skill de <b>R$ 97, paga uma vez</b>, no lugar de R$ 100 a R$ 200 por vídeo.'
+    },
+    tempo: {
+      h1: 'Seu editor demora dias. <em>A IA edita em minutos.</em>',
+      sub: 'Gravou o imóvel? Manda pro Claude e revisa o vídeo pronto, com cortes, legenda, textos e sons. Em média de 5 a 15 minutos por vídeo de até 1 minuto. <b>R$ 97, pagamento único.</b>'
+    },
+    antes: {
+      h1: 'Gravação de celular. <em>Acabamento de lançamento.</em>',
+      sub: 'Arrasta logo abaixo e vê a mesma gravação antes e depois da IA. Você grava, o Claude edita, você posta. <b>R$ 97, pagamento único.</b>'
+    }
+  };
+  (function () {
+    var ref = ((qs.get('h') || '') + ' ' + (qs.get('utm_content') || '')).toLowerCase();
+    var k = /antes|depois|\bv1\b|v1[-_]/.test(ref) ? 'antes' : /tempo|minuto|\bv3\b|v3[-_]/.test(ref) ? 'tempo' : 'custo';
+    var g = GANCHOS[k];
+    if (k !== 'custo') { $('[data-gancho]').innerHTML = g.h1; $('[data-sub]').innerHTML = g.sub; }
+    document.documentElement.dataset.gancho = k;
+  })();
+
   // ---------- topo e barra fixa ----------
   var topo = $('#topo'), barra = $('#barraCta'), hero = $('.hero');
-  var escuros = $$('.demo, .obra, .final, .rodape');
+  var claros = $$('.claro');
   function aoRolar() {
     var y = window.scrollY;
     topo.classList.toggle('solido', y > 30);
-    var meio = 40, sobreEscuro = false;
-    escuros.forEach(function (s) { var r = s.getBoundingClientRect(); if (r.top <= meio && r.bottom > meio) sobreEscuro = true; });
-    topo.classList.toggle('escuro', sobreEscuro);
+    var meio = 40, sobreClaro = false;
+    claros.forEach(function (s) { var r = s.getBoundingClientRect(); if (r.top <= meio && r.bottom > meio) sobreClaro = true; });
+    topo.classList.toggle('claro-topo', sobreClaro);
     var hb = hero.getBoundingClientRect().bottom;
     var noFim = $('.final').getBoundingClientRect().top < window.innerHeight * .7;
     var mostra = hb < 0 && !noFim;
@@ -155,6 +179,26 @@
     som.setAttribute('aria-pressed', ligar ? 'true' : 'false');
     $('.som-txt', som).textContent = ligar ? 'Som ligado' : 'Ativar o som';
   });
+
+  // ---------- antes x depois (arrastar) ----------
+  var comp = $('#comp'), compRange = $('#compRange'), mexeu = false;
+  function poeX(v) { comp.style.setProperty('--x', v + '%'); }
+  compRange.addEventListener('input', function () { mexeu = true; poeX(compRange.value); });
+  poeX(50);
+  // dica de movimento quando aparece na tela (para de vez assim que a pessoa mexe)
+  if (!reduz && 'IntersectionObserver' in window) {
+    var dio = new IntersectionObserver(function (es) {
+      if (!es[0].isIntersecting) return; dio.disconnect();
+      var ini = performance.now(), dur = 2600;
+      (function anda(t) {
+        if (mexeu) return;
+        var k = Math.min(1, (t - ini) / dur), v = 50 + Math.sin(k * Math.PI * 2) * 32 * (1 - k * 0.4);
+        poeX(v); compRange.value = v;
+        if (k < 1) requestAnimationFrame(anda); else { poeX(50); compRange.value = 50; }
+      })(ini);
+    }, { threshold: 0.6 });
+    dio.observe(comp);
+  }
 
   // ---------- calculadora ----------
   var qtd = $('#qtd'), val = $('#val');

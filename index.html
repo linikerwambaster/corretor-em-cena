@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Corretor em Cena | Edite os vídeos dos seus imóveis com IA</title>
-<meta name="description" content="Skill de edição de vídeos imobiliários com IA no Claude. Você grava, a IA corta, legenda e finaliza. R$ 97, pagamento único, garantia de 7 dias.">
+<title>Corretor em Cena | Pare de pagar editor por cada vídeo de imóvel</title>
+<meta name="description" content="Você grava o imóvel no celular. A IA corta, legenda e finaliza no Claude. R$ 97, pagamento único, garantia de 7 dias.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#F1EEE8">
-<meta property="og:title" content="Corretor em Cena | Edição de vídeos imobiliários com IA">
-<meta property="og:description" content="Você grava o imóvel. A IA edita no Claude. Sem pagar por vídeo e sem esperar editor.">
+<meta name="theme-color" content="#0D0B0B">
+<meta property="og:title" content="Corretor em Cena | Pare de pagar editor por cada vídeo de imóvel">
+<meta property="og:description" content="Você grava no celular. A IA edita no Claude. Você revisa e posta.">
 <meta property="og:image" content="img/og.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/kaike_hero.webp" type="image/webp">
 <link rel="stylesheet" href="assets/css/lp.css">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
@@ -26,10 +26,10 @@
 <header class="topo" id="topo">
   <a class="marca" href="#" aria-label="Corretor em Cena, início">
     <span class="marca-sel" aria-hidden="true"></span>
-    <span class="marca-txt">Corretor <i>em</i> Cena</span>
+    <span class="marca-txt">Corretor <b>em</b> Cena</span>
   </a>
   <nav class="topo-nav" aria-label="Seções">
-    <a href="#demo">Demonstração</a>
+    <a href="#antes-depois">Antes e depois</a>
     <a href="#obra">Como funciona</a>
     <a href="#oferta">Preço</a>
     <a href="#duvidas">Dúvidas</a>
@@ -41,6 +41,7 @@
 
 <!-- 1. HERO ------------------------------------------------------------ -->
 <section class="hero" aria-labelledby="h1">
+  <div class="hero-luz" aria-hidden="true"></div>
   <div class="hero-grade" aria-hidden="true"></div>
 
   <div class="hero-cena" aria-hidden="true">
@@ -49,91 +50,104 @@
       <i class="c c1"></i><i class="c c2"></i><i class="c c3"></i><i class="c c4"></i>
       <div class="visor-rec"><b></b>REC <span id="tc">00:00:00:00</span></div>
       <div class="visor-info"><span>4K · 30 FPS</span><span>TAKE 07</span></div>
-      <div class="visor-mira"></div>
     </div>
     <img class="hero-foto" src="img/kaike_hero.webp" width="747" height="1500" alt="">
   </div>
 
   <div class="hero-texto">
-    <p class="selo-lanc"><span>Lançamento</span> Skill de edição com IA para corretores</p>
-    <h1 id="h1" class="h1">
-      <span class="ln"><span>Seu imóvel merece</span></span>
-      <span class="ln"><span>um vídeo de</span></span>
-      <span class="ln"><span><em>lançamento.</em></span></span>
-    </h1>
-    <p class="hero-sub">Com o <b>Corretor em Cena</b> você mesmo edita os vídeos dos seus imóveis com inteligência artificial no Claude: cortes, legendas, textos animados, transições e sons. Sem pagar de R$ 100 a R$ 200 por vídeo e sem esperar a agenda de editor.</p>
+    <p class="selo-lanc"><span>Para corretores</span> Skill de edição com IA no Claude</p>
+    <h1 id="h1" class="h1" data-gancho>Pare de pagar editor por <em>cada vídeo de imóvel.</em></h1>
     <div class="hero-acoes">
-      <a class="btn btn-pri" data-cta href="#oferta">Quero editar meus vídeos <span aria-hidden="true">→</span></a>
-      <a class="link-demo" href="#demo"><span class="play" aria-hidden="true"></span> Ver a demonstração</a>
+      <a class="btn btn-pri" data-cta href="#oferta">Quero parar de pagar editor <span aria-hidden="true">→</span></a>
+      <a class="link-demo" href="#antes-depois"><span class="play" aria-hidden="true"></span> Ver o antes e depois</a>
     </div>
-    <p class="hero-micro"><span>R$ 97 · pagamento único</span><span>Garantia de 7 dias</span><span>Grava no celular, edita no computador</span></p>
+    <p class="hero-sub" data-sub>Você grava no celular. A IA corta, legenda e finaliza dentro do Claude. Você só revisa e posta. Uma skill de <b>R$ 97, paga uma vez</b>, no lugar de R$ 100 a R$ 200 por vídeo.</p>
+    <p class="hero-micro"><span>R$ 97 uma vez só</span><span>Garantia de 7 dias</span><span>Grava no celular, edita no computador</span></p>
   </div>
 
   <aside class="ficha" aria-label="Ficha técnica do produto">
     <p class="ficha-tit">Ficha técnica</p>
     <dl>
-      <div><dt>Tipo</dt><dd>Skill de edição para o Claude</dd></div>
       <div><dt>Entrada</dt><dd>R$ 97</dd></div>
       <div><dt>Mensalidade da skill</dt><dd>R$ 0<sup>*</sup></dd></div>
       <div><dt>Tempo médio</dt><dd>5 a 15 min<sup>**</sup></dd></div>
+      <div><dt>Programa de edição</dt><dd>Nenhum</dd></div>
     </dl>
-    <p class="ficha-nota">* Assinatura do Claude à parte. ** Vídeo de até 1 min.</p>
+    <p class="ficha-nota">* Assinatura do Claude à parte. ** Vídeo de até 1 minuto.</p>
   </aside>
-
-  <a class="rolar" href="#historia" aria-label="Rolar para a próxima seção"><span></span></a>
 </section>
 
 <!-- 2. FAIXA ----------------------------------------------------------- -->
 <div class="faixa" aria-hidden="true">
   <div class="faixa-trilho" id="faixa">
-    <span>Cortes</span><i>✦</i><span>Legendas</span><i>✦</i><span>Textos animados</span><i>✦</i><span>Transições</span><i>✦</i><span>Efeitos sonoros</span><i>✦</i><span>Ritmo de Reels</span><i>✦</i>
-    <span>Cortes</span><i>✦</i><span>Legendas</span><i>✦</i><span>Textos animados</span><i>✦</i><span>Transições</span><i>✦</i><span>Efeitos sonoros</span><i>✦</i><span>Ritmo de Reels</span><i>✦</i>
+    <span>Cortes</span><i>●</i><span>Legendas</span><i>●</i><span>Textos animados</span><i>●</i><span>Transições</span><i>●</i><span>Efeitos sonoros</span><i>●</i><span>Ritmo de Reels</span><i>●</i>
+    <span>Cortes</span><i>●</i><span>Legendas</span><i>●</i><span>Textos animados</span><i>●</i><span>Transições</span><i>●</i><span>Efeitos sonoros</span><i>●</i><span>Ritmo de Reels</span><i>●</i>
   </div>
 </div>
 
-<!-- 3. HISTÓRIA -------------------------------------------------------- -->
+<!-- 3. ANTES E DEPOIS -------------------------------------------------- -->
+<section class="ad" id="antes-depois" aria-labelledby="h-ad">
+  <div class="wrap ad-grid">
+    <div class="ad-txt">
+      <p class="rot" data-rev>Prova na hora</p>
+      <h2 id="h-ad" class="h2" data-rev>Arrasta. Isso aqui saiu <em>de um celular.</em></h2>
+      <p data-rev>Mesma gravação, mesmo segundo do vídeo. À esquerda, como saiu do celular do Kaíke. À direita, depois da IA: corte de cinema, legenda no ritmo da fala, título e enquadramento.</p>
+      <a class="link-seta" href="#demo" data-rev>Ver o vídeo inteiro <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="comp" id="comp" data-rev>
+      <img class="comp-img" src="img/depois.webp" width="720" height="1280" alt="Quadro do vídeo depois da edição com IA, com legenda e faixas de cinema" loading="lazy">
+      <div class="comp-antes" id="compAntes"><img class="comp-img" src="img/antes.webp" width="720" height="1280" alt="O mesmo quadro como saiu do celular, sem edição" loading="lazy"></div>
+      <span class="comp-tag comp-tag-a">Celular, sem edição</span>
+      <span class="comp-tag comp-tag-d">Editado com IA</span>
+      <div class="comp-linha" id="compLinha" aria-hidden="true"><span class="comp-pega">‹ ›</span></div>
+      <input class="comp-range" id="compRange" type="range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois">
+    </div>
+  </div>
+</section>
+
+<!-- 4. HISTÓRIA -------------------------------------------------------- -->
 <section class="historia" id="historia" aria-labelledby="h-hist">
   <div class="wrap hist-grid">
     <div class="hist-txt">
       <p class="rot" data-rev>Sexta, 18h40</p>
-      <h2 id="h-hist" class="h2" data-rev>A visita acabou.<br><em>O vídeo, não.</em></h2>
+      <h2 id="h-hist" class="h2" data-rev>Quanto custou o último vídeo <em>do seu imóvel?</em></h2>
       <div class="hist-corpo" data-rev>
-        <p>Você sai do imóvel com 14 takes no celular. A fachada, a sala com aquela luz bonita do fim de tarde, a varanda, o quintal. O imóvel é bom. Agora ele precisa aparecer.</p>
-        <p>E aí começa a outra metade do trabalho. Ou você manda tudo pro editor, paga entre R$ 100 e R$ 200 por vídeo e espera ele encaixar na agenda. Ou tenta editar sozinho no celular, perde a noite e o resultado ainda parece amador.</p>
-        <p>Enquanto isso, o imóvel fica parado na sua galeria.</p>
+        <p>Você sai da visita com 14 takes no celular. A fachada, a sala com a luz bonita do fim de tarde, a varanda. O imóvel é bom. Agora ele precisa aparecer.</p>
+        <p>Aí começa a outra metade do trabalho. Ou você paga entre R$ 100 e R$ 200 por vídeo e espera o editor encaixar na agenda. Ou tenta editar sozinho no celular, perde a noite e o resultado ainda fica com cara de amador.</p>
+        <p class="hist-fecho">Enquanto isso, o imóvel fica parado na sua galeria.</p>
       </div>
     </div>
 
     <figure class="citacao" data-rev>
       <blockquote>
-        <p>“Eu vivi exatamente isso. Pagava praticamente <mark>R$ 100 por vídeo</mark> e cheguei a gastar de <mark>R$ 500 a R$ 700 por mês</mark> com edição. E mesmo pagando, dependia da agenda de outra pessoa pra postar. Hoje eu gravo, peço pro Claude editar e em poucos minutos estou revisando o vídeo.”</p>
+        <p>“Eu pagava praticamente <mark>R$ 100 por vídeo</mark> e cheguei a gastar de <mark>R$ 500 a R$ 700 por mês</mark> com edição. E mesmo pagando, dependia da agenda de outra pessoa pra postar. Hoje eu gravo, peço pro Claude editar e em poucos minutos estou revisando.”</p>
       </blockquote>
-      <figcaption><span class="tarja-nome"><i>Kaíke Barral</i><span>Corretor de imóveis · criador do Corretor em Cena</span></span></figcaption>
+      <figcaption><span class="tarja-nome"><b>Kaíke Barral</b><span>Corretor de imóveis · criador do Corretor em Cena</span></span></figcaption>
     </figure>
   </div>
 
   <div class="wrap recibos">
-    <p class="rot" data-rev>Vídeos reais que o Kaíke pagou pra um editor fazer</p>
+    <h3 class="h3" data-rev>Esses três custaram <em>quase R$ 300.</em></h3>
     <div class="recibos-grid">
       <figure class="recibo" data-rev><img src="img/pago_1.jpg" width="360" height="640" alt="Vídeo de imóvel feito por editor contratado" loading="lazy"><span class="carimbo">Pago<small>≈ R$ 100</small></span></figure>
       <figure class="recibo" data-rev><img src="img/pago_2.jpg" width="360" height="640" alt="Vídeo do Kaíke feito por editor contratado" loading="lazy"><span class="carimbo">Pago<small>≈ R$ 100</small></span></figure>
       <figure class="recibo" data-rev><img src="img/pago_3.jpg" width="360" height="640" alt="Outro vídeo do Kaíke feito por editor contratado" loading="lazy"><span class="carimbo">Pago<small>≈ R$ 100</small></span></figure>
     </div>
-    <p class="recibos-leg" data-rev>Bons vídeos. Mas cada um custou praticamente R$ 100 e um prazo de entrega. Multiplica isso pelos imóveis que você tem na carteira.</p>
+    <p class="recibos-leg" data-rev>Vídeos reais que o Kaíke pagou pra um editor fazer. Bons vídeos. Mas cada um custou praticamente R$ 100 e um prazo de entrega. Agora multiplica pelos imóveis da sua carteira.</p>
   </div>
 </section>
 
-<!-- 4. DEMONSTRAÇÃO ---------------------------------------------------- -->
+<!-- 5. DEMONSTRAÇÃO ---------------------------------------------------- -->
 <section class="demo" id="demo" aria-labelledby="h-demo">
   <div class="wrap demo-grid">
     <div class="demo-txt">
-      <p class="rot rot-claro" data-rev>Demonstração real</p>
-      <h2 id="h-demo" class="h2" data-rev>Mesma gravação de celular.<br><em>Olha a diferença.</em></h2>
-      <p data-rev>No cantinho, o que saiu do celular do Kaíke. Na tela grande, o que a IA entregou: pausas e repetições cortadas, legenda, textos que aparecem no momento exato da fala, transições e sons.</p>
+      <p class="rot" data-rev>Demonstração real</p>
+      <h2 id="h-demo" class="h2" data-rev>Gravado de uma vez. <em>Editado em minutos.</em></h2>
+      <p data-rev>No cantinho, o que saiu do celular. Na tela grande, o que a IA entregou: pausas e repetições cortadas, legenda, textos que aparecem na hora exata da fala, transições e sons.</p>
       <ul class="demo-lista" data-rev>
-        <li><span>01</span>Gravado de uma vez, sem roteiro decorado</li>
+        <li><span>01</span>Sem roteiro decorado</li>
         <li><span>02</span>Editado com a skill, dentro do Claude</li>
-        <li><span>03</span>Nenhum programa de edição foi aberto</li>
+        <li><span>03</span>Nenhum programa de edição aberto</li>
       </ul>
     </div>
     <div class="celular" data-rev>
@@ -146,8 +160,8 @@
 
   <div class="wrap estilos">
     <div class="estilos-cab">
-      <h3 class="h3" data-rev>Três estilos. <em>A mesma matéria-prima.</em></h3>
-      <p data-rev>Cada criativo saiu de uma gravação de celular diferente do Kaíke e foi editado com IA no Claude. Você escolhe o estilo no pedido.</p>
+      <h3 class="h3" data-rev>Um vídeo de cada jeito. <em>Sem pagar a mais por isso.</em></h3>
+      <p data-rev>Cada criativo saiu de uma gravação de celular do Kaíke e foi editado com IA no Claude. Você escolhe o estilo no pedido.</p>
     </div>
     <div class="estilos-trilho">
       <figure class="estilo" data-rev>
@@ -166,12 +180,12 @@
   </div>
 </section>
 
-<!-- 5. OBRA 3D --------------------------------------------------------- -->
+<!-- 6. OBRA 3D --------------------------------------------------------- -->
 <section class="obra" id="obra" aria-labelledby="h-obra">
   <div class="obra-intro wrap">
-    <p class="rot rot-claro" data-rev>Como funciona</p>
-    <h2 id="h-obra" class="h2" data-rev>Da obra bruta<br><em>à entrega das chaves.</em></h2>
-    <p data-rev>É assim que um take solto de celular vira vídeo de lançamento. Role a página e acompanhe a obra.</p>
+    <p class="rot" data-rev>Como funciona</p>
+    <h2 id="h-obra" class="h2" data-rev>Você não precisa ser editor. <em>Só precisa gravar.</em></h2>
+    <p data-rev>Role e veja a obra subir. Cada fase da casa é uma etapa da sua edição.</p>
   </div>
 
   <div class="obra-palco" id="obraPalco">
@@ -187,43 +201,43 @@
 
       <ol class="etapas" id="etapas">
         <li class="etapa on" data-i="0">
-          <p class="etapa-fase"><span>Fase 01/05</span> Fundação</p>
+          <p class="etapa-fase"><span>01/05</span> Fundação</p>
           <h3>Você grava.</h3>
-          <p>Celular, câmera ou drone. Do jeito que você já grava hoje: takes soltos, sem roteiro decorado, sem iluminação de estúdio.</p>
+          <p>Celular, câmera ou drone. Do jeito que você já grava hoje.</p>
         </li>
         <li class="etapa" data-i="1">
-          <p class="etapa-fase"><span>Fase 02/05</span> Estrutura</p>
-          <h3>Você entrega pro Claude.</h3>
-          <p>Coloca os arquivos numa pasta e pede em português, do seu jeito: <q>edita esse apartamento no estilo documentário</q>.</p>
+          <p class="etapa-fase"><span>02/05</span> Estrutura</p>
+          <h3>Manda pro Claude.</h3>
+          <p>Coloca os arquivos na pasta e pede em português: <q>edita no estilo documentário</q>.</p>
         </li>
         <li class="etapa" data-i="2">
-          <p class="etapa-fase"><span>Fase 03/05</span> Acabamento</p>
-          <h3>A skill faz o trabalho de editor.</h3>
-          <p>Corta pausas e repetições, coloca legenda, textos animados, transições e efeitos sonoros, no ritmo de Reels.</p>
+          <p class="etapa-fase"><span>03/05</span> Acabamento</p>
+          <h3>A IA edita.</h3>
+          <p>Corta pausas e repetições, põe legenda, textos, transições e sons.</p>
         </li>
         <li class="etapa" data-i="3">
-          <p class="etapa-fase"><span>Fase 04/05</span> Vistoria</p>
-          <h3>Você revisa e pede ajuste.</h3>
-          <p><q>Tira esse trecho.</q> <q>Aumenta a legenda.</q> <q>Coloca o valor do imóvel no final.</q> Sem curso de edição e sem programa difícil.</p>
+          <p class="etapa-fase"><span>04/05</span> Vistoria</p>
+          <h3>Você revisa.</h3>
+          <p><q>Tira esse trecho.</q> <q>Aumenta a legenda.</q> Ela ajusta.</p>
         </li>
         <li class="etapa" data-i="4">
-          <p class="etapa-fase"><span>Fase 05/05</span> Entrega das chaves</p>
-          <h3>Vídeo pronto pra postar.</h3>
-          <p>Vertical e pronto pro Reels, pro anúncio e pro WhatsApp do cliente. Em média de 5 a 15 minutos por vídeo de até 1 minuto.<sup>*</sup></p>
+          <p class="etapa-fase"><span>05/05</span> Entrega das chaves</p>
+          <h3>Pronto pra postar.</h3>
+          <p>Reels, anúncio e WhatsApp do cliente. Média de 5 a 15 min por vídeo de até 1 min.<sup>*</sup></p>
         </li>
       </ol>
-      <p class="obra-nota">* O tempo varia com a duração, a quantidade de takes e os efeitos que você pedir.</p>
+      <p class="obra-nota">* O tempo varia com a duração, a quantidade de takes e os efeitos pedidos.</p>
     </div>
   </div>
 </section>
 
-<!-- 6. CALCULADORA ----------------------------------------------------- -->
-<section class="conta" id="conta" aria-labelledby="h-conta">
+<!-- 7. CALCULADORA (bloco claro) --------------------------------------- -->
+<section class="conta claro" id="conta" aria-labelledby="h-conta">
   <div class="wrap conta-grid">
     <div class="conta-txt">
       <p class="rot" data-rev>Faça a conta</p>
-      <h2 id="h-conta" class="h2" data-rev>Quanto o editor<br><em>já te custou?</em></h2>
-      <p data-rev>Arrasta os controles com os seus números de verdade.</p>
+      <h2 id="h-conta" class="h2" data-rev>Faz essa conta antes de pagar <em>o próximo editor.</em></h2>
+      <p data-rev>Arrasta com os seus números de verdade.</p>
     </div>
 
     <div class="calc" data-rev>
@@ -258,12 +272,12 @@
   </div>
 </section>
 
-<!-- 7. MEMORIAL + TABELA ----------------------------------------------- -->
-<section class="memorial" id="oferta" aria-labelledby="h-oferta">
+<!-- 8. MEMORIAL + TABELA (bloco claro) --------------------------------- -->
+<section class="memorial claro" id="oferta" aria-labelledby="h-oferta">
   <div class="wrap">
     <div class="memorial-cab">
       <p class="rot" data-rev>Memorial descritivo</p>
-      <h2 id="h-oferta" class="h2" data-rev>O que vem no<br><em>Corretor em Cena.</em></h2>
+      <h2 id="h-oferta" class="h2" data-rev>Você leva as chaves <em>do seu próprio editor.</em></h2>
     </div>
 
     <div class="memorial-grid">
@@ -273,7 +287,7 @@
         <li data-rev><span class="it-n">03</span><div><h3>Aulas práticas de uso</h3><p>Um vídeo real editado do começo ao fim, do arquivo bruto ao vídeo pronto pra postar.</p></div></li>
         <li data-rev><span class="it-n">04</span><div><h3>Modelos de pedidos e estilos</h3><p>Editorial, documentário, planta baixa e outros. É copiar, colar e trocar o nome do imóvel.</p></div></li>
         <li data-rev><span class="it-n">05</span><div><h3>Checklist de gravação do imóvel</h3><p>Fachada, ambientes, detalhes e drone, na ordem que facilita a edição.</p></div></li>
-        <li data-rev><span class="it-n">06</span><div><h3>Roteiro de revisão antes de postar</h3><p>O que conferir no vídeo antes de publicar: nomes, valores, legenda e informações do imóvel.</p></div></li>
+        <li data-rev><span class="it-n">06</span><div><h3>Roteiro de revisão antes de postar</h3><p>O que conferir antes de publicar: nomes, valores, legenda e informações do imóvel.</p></div></li>
         <li class="bonus" data-rev><span class="it-n">+</span><div><h3>Bônus: banco de ganchos e roteiros curtos</h3><p>Aberturas e roteiros prontos pra apresentar casas, apartamentos, terrenos e chácaras.</p></div></li>
       </ol>
 
@@ -286,7 +300,7 @@
           <div><dt>Vistoria</dt><dd>7 dias de garantia</dd></div>
           <div><dt>Entrega das chaves</dt><dd>Acesso na área de membros após a confirmação do pagamento</dd></div>
         </dl>
-        <a class="btn btn-pri btn-larga" data-cta href="#">Quero o meu acesso por R$ 97 <span aria-hidden="true">→</span></a>
+        <a class="btn btn-pri btn-larga" data-cta href="#">Quero parar de pagar editor <span aria-hidden="true">→</span></a>
         <p class="tabela-seg"><span class="cad" aria-hidden="true"></span> Compra segura pela Cakto</p>
         <p class="tabela-nota">* A skill não tem mensalidade. A assinatura do Claude é contratada à parte, direto com a Anthropic.</p>
       </aside>
@@ -294,7 +308,7 @@
   </div>
 </section>
 
-<!-- 8. GARANTIA -------------------------------------------------------- -->
+<!-- 9. GARANTIA -------------------------------------------------------- -->
 <section class="garantia" aria-labelledby="h-gar">
   <div class="wrap gar-grid">
     <div class="gar-selo" aria-hidden="true">
@@ -302,13 +316,13 @@
       <b>7</b><span>dias</span>
     </div>
     <div class="gar-txt">
-      <h2 id="h-gar" class="h2" data-rev>Faz a vistoria <em>antes de assinar.</em></h2>
+      <h2 id="h-gar" class="h2" data-rev>Testa nos seus imóveis. <em>Não gostou, o dinheiro volta.</em></h2>
       <p data-rev>Entra, instala e edita os seus próprios vídeos. Se em até 7 dias você achar que não é pra você, pede o reembolso e recebe o valor de volta. Sem pergunta e sem burocracia.</p>
     </div>
   </div>
 </section>
 
-<!-- 9. QUEM É ---------------------------------------------------------- -->
+<!-- 10. QUEM É --------------------------------------------------------- -->
 <section class="quem" id="quem" aria-labelledby="h-quem">
   <div class="wrap quem-grid">
     <figure class="quem-foto" data-rev>
@@ -317,9 +331,9 @@
     </figure>
     <div class="quem-txt">
       <p class="rot" data-rev>Quem está por trás</p>
-      <h2 id="h-quem" class="h2" data-rev>Corretor que entende<br><em>de marketing.</em></h2>
+      <h2 id="h-quem" class="h2" data-rev>Feito por um corretor. <em>Não por um editor.</em></h2>
       <div data-rev>
-        <p><b>Kaíke Barral</b> é corretor de imóveis em São Paulo, formado em Publicidade e Propaganda e estrategista de marketing digital. Começou na tecnologia aos 19 anos, trabalhando para o Google, onde ganhou experiência em Google Ads e performance.</p>
+        <p><b>Kaíke Barral</b> é corretor de imóveis em São Paulo, formado em Publicidade e Propaganda e estrategista de marketing digital. Começou na tecnologia aos 19 anos, trabalhando para o Google, com Google Ads e performance.</p>
         <p>No mercado imobiliário, fez a primeira venda já no segundo mês de atuação. Hoje junta marketing, vendas e inteligência artificial pra ajudar corretores a produzir mais, com baixo custo e sem depender de agência. Fora do trabalho, é marido e pai.</p>
       </div>
       <ul class="numeros" data-rev>
@@ -331,7 +345,7 @@
   </div>
 </section>
 
-<!-- 10. PRA QUEM É ----------------------------------------------------- -->
+<!-- 11. PRA QUEM É ----------------------------------------------------- -->
 <section class="praquem" aria-labelledby="h-pq">
   <div class="wrap">
     <h2 id="h-pq" class="h2 h2-c" data-rev>Esse imóvel é <em>pra você?</em></h2>
@@ -357,12 +371,12 @@
   </div>
 </section>
 
-<!-- 11. DÚVIDAS -------------------------------------------------------- -->
+<!-- 12. DÚVIDAS -------------------------------------------------------- -->
 <section class="duvidas" id="duvidas" aria-labelledby="h-faq">
   <div class="wrap faq-grid">
     <div>
-      <p class="rot" data-rev>Antes de comprar</p>
-      <h2 id="h-faq" class="h2" data-rev>Perguntas<br><em>frequentes.</em></h2>
+      <p class="rot" data-rev>Dúvidas</p>
+      <h2 id="h-faq" class="h2" data-rev>Antes de você <em>perguntar.</em></h2>
     </div>
     <div class="faq">
       <details><summary>Nunca usei o Claude. Vou conseguir?</summary><p>Vai. O passo a passo começa do zero: criar a conta, instalar e colocar a skill pra funcionar. Depois disso, você conversa com o Claude em português, como se estivesse mandando mensagem pro seu editor.</p></details>
@@ -379,16 +393,16 @@
   </div>
 </section>
 
-<!-- 12. CTA FINAL ------------------------------------------------------ -->
+<!-- 13. CTA FINAL ------------------------------------------------------ -->
 <section class="final" aria-labelledby="h-final">
   <div class="final-luz" aria-hidden="true"></div>
   <div class="wrap final-grid">
     <div class="final-txt">
-      <h2 id="h-final" class="h2" data-rev>Você já faz a parte difícil:<br><em>achar o imóvel e gravar.</em></h2>
+      <h2 id="h-final" class="h2" data-rev>Você já faz a parte difícil: <em>achar o imóvel e gravar.</em></h2>
       <p data-rev>Deixa a edição com a IA e coloca os seus imóveis em cena.</p>
       <div class="final-acoes" data-rev>
-        <a class="btn btn-pri btn-claro" data-cta href="#">Quero o Corretor em Cena <span aria-hidden="true">→</span></a>
-        <p><span>R$ 97 · pagamento único</span><span>Garantia de 7 dias</span></p>
+        <a class="btn btn-pri" data-cta href="#">Quero parar de pagar editor <span aria-hidden="true">→</span></a>
+        <p><span>R$ 97 uma vez só</span><span>Garantia de 7 dias</span></p>
       </div>
     </div>
     <img class="final-foto" src="img/kaike_final.webp" width="900" height="872" alt="Kaíke Barral sorrindo" loading="lazy" data-rev>
@@ -399,14 +413,14 @@
 
 <footer class="rodape">
   <div class="wrap rod-grid">
-    <p class="marca-txt">Corretor <i>em</i> Cena</p>
+    <p class="marca-txt">Corretor <b>em</b> Cena</p>
     <p>Corretor em Cena é um produto de Kaíke Barral. Claude é uma marca da Anthropic; este produto não tem vínculo com a Anthropic. Os resultados de alcance, contatos e vendas dependem de vários fatores e não são garantidos.</p>
     <p><a href="privacidade.html">Política de privacidade</a></p>
   </div>
 </footer>
 
 <div class="barra-cta" id="barraCta" aria-hidden="true">
-  <div><b>Corretor em Cena</b><span>R$ 97 · pagamento único</span></div>
+  <div><b>Corretor em Cena</b><span>R$ 97 uma vez só</span></div>
   <a class="btn btn-pri" data-cta href="#" tabindex="-1">Quero o meu</a>
 </div>
 
@@ -415,6 +429,7 @@
   <div><button type="button" data-cookie="nao">Recusar</button><button type="button" data-cookie="sim">Aceitar</button></div>
 </div>
 
+<noscript><style>[data-rev]{opacity:1!important;transform:none!important}</style></noscript>
 <script src="assets/js/lp.js" defer></script>
 </body>
 </html>
